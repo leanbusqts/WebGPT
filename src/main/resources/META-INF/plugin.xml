@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>dev.bulean.webgpt</id>
+    <name>WebGPT</name>
+    <vendor email="bulean@protonmail.com" url="https://www.bulean.dev">bulean</vendor>
+    <depends>com.intellij.modules.platform</depends>
+    <description>
+        <![CDATA[Plugin to access ChatGPT Web from IntelliJ/Android Studio.]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+          <ul>
+            <li><b>1.0.0</b> Release version.</li>
+          </ul>
+        ]]>
+    </change-notes>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+            id="WebGPT"
+            anchor="right"
+            icon="/META-INF/pluginIcon.svg"
+            factoryClass="dev.bulean.webgpt.WebGPTToolWindowFactory"
+            secondary="false"
+            canCloseContents="false"/>
+    </extensions>
+</idea-plugin>

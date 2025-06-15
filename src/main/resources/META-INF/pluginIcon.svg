@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="paint0_linear" x1="2.94192" y1="4.89955" x2="37.7772" y2="39.7345"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0.15937" stop-color="#3BEA62"/>
+            <stop offset="0.5404" stop-color="#3C99CC"/>
+            <stop offset="0.93739" stop-color="#6B57FF"/>
+        </linearGradient>
+    </defs>
+
+    <path d="M20 5 L35 12.5 L35 27.5 L20 35 L5 27.5 L5 12.5 Z"
+          stroke="url(#paint0_linear)" stroke-width="2" fill="none"/>
+
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="url(#paint0_linear)">
+        GPT
+    </text>
+</svg>
