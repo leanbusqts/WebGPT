@@ -16,8 +16,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-//        intellijIdeaCommunity("2024.2.6")
-        create("IC", "2025.1")
+        create("IC", "2024.1")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
 
     }
@@ -27,7 +26,7 @@ intellijPlatform {
     buildSearchableOptions = false
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "242"
+            sinceBuild = "231"
         }
 
         changeNotes = """
@@ -43,14 +42,14 @@ intellijPlatform {
 
 tasks {
     patchPluginXml {
-        sinceBuild.set("242")
+        sinceBuild.set("231")
         changeNotes.set("Add a ToolWindow with ChatGPT Web embedded using JCEF.")
     }
     withType<JavaCompile> {
-        sourceCompatibility = "21"
-        targetCompatibility = "21"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "21"
+        kotlinOptions.jvmTarget = "17"
     }
 }
