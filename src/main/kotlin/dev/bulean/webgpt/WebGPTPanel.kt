@@ -1,5 +1,6 @@
 package dev.bulean.webgpt
 
+import com.intellij.openapi.project.Project
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.jcef.JBCefBrowser
 import java.awt.BorderLayout
@@ -8,7 +9,7 @@ import javax.swing.BoxLayout
 import javax.swing.JPanel
 import javax.swing.JScrollPane
 
-class WebGPTPanel {
+class WebGPTPanel(private val project: Project) {
 
     private val browser = JBCefBrowser(CHAT_OPENAI_URL)
 
@@ -17,7 +18,7 @@ class WebGPTPanel {
             layout = BoxLayout(this, BoxLayout.Y_AXIS)
         }
 
-        val buttonPanel = WebGPTActions(browser).createButtonPanel()
+        val buttonPanel = WebGPTActions(project, browser).createButtonPanel()
 
         val scrollPane = JScrollPane(buttonPanel).apply {
             horizontalScrollBarPolicy = JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED
@@ -28,7 +29,6 @@ class WebGPTPanel {
             border = null
             isOpaque = false
             viewport.isOpaque = false
-
             viewport.preferredSize = buttonPanel.preferredSize
         }
 
@@ -46,4 +46,3 @@ class WebGPTPanel {
         private const val CHAT_OPENAI_URL = "https://chat.openai.com"
     }
 }
-

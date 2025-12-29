@@ -7,8 +7,9 @@ import com.intellij.ui.content.ContentFactory
 
 class WebGPTToolWindowFactory : ToolWindowFactory {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val contentPanel = WebGPTPanel().build()
+        val contentPanel = WebGPTPanel(project).build()
         val content = ContentFactory.getInstance().createContent(contentPanel, "", false)
         toolWindow.contentManager.addContent(content)
     }
 }
+

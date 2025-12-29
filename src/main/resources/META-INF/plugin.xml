@@ -3,6 +3,7 @@
     <name>WebGPT</name>
     <vendor email="bulean@protonmail.com" url="https://www.bulean.dev">bulean</vendor>
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
     <description>
         <![CDATA[Plugin to access ChatGPT Web from IntelliJ/Android Studio.]]>
     </description>
@@ -17,7 +18,7 @@
         <toolWindow
             id="WebGPT"
             anchor="right"
-            icon="/META-INF/pluginIcon.svg"
+            icon="/META-INF/webgpticon.svg"
             factoryClass="dev.bulean.webgpt.WebGPTToolWindowFactory"
             secondary="false"
             canCloseContents="false"/>
