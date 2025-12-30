@@ -19,7 +19,7 @@
             id="WebGPT"
             anchor="right"
             icon="/META-INF/webgpticon.svg"
-            factoryClass="dev.bulean.webgpt.WebGPTToolWindowFactory"
+            factoryClass="dev.bulean.webgpt.presentation.WebGPTToolWindowFactory"
             secondary="false"
             canCloseContents="false"/>
     </extensions>

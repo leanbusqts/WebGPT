@@ -21,6 +21,7 @@ dependencies {
         )
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
     }
+    testImplementation("junit:junit:4.13.2")
 }
 
 intellijPlatform {
@@ -45,4 +46,3 @@ tasks {
         compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17) }
     }
 }
-

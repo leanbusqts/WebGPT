@@ -1,4 +1,4 @@
-package dev.bulean.webgpt
+package dev.bulean.webgpt.presentation
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
@@ -12,4 +12,3 @@ class WebGPTToolWindowFactory : ToolWindowFactory {
         toolWindow.contentManager.addContent(content)
     }
 }
-

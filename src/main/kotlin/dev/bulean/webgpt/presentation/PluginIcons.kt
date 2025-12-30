@@ -1,4 +1,4 @@
-package dev.bulean.webgpt
+package dev.bulean.webgpt.presentation
 
 import com.intellij.openapi.util.IconLoader
 import javax.swing.Icon
