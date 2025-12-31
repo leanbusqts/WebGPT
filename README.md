@@ -1,6 +1,10 @@
 # WebGPT
 
+![WebGPT plugin icon](src/main/resources/META-INF/webgpticon.svg)
+
 WebGPT is an IntelliJ-based plugin that embeds the ChatGPT web UI in a tool window and provides quick prompts for selected code.
+
+Current plugin version: **1.0.0**
 
 ## Architecture
 

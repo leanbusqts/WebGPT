@@ -1,31 +1,37 @@
 package dev.bulean.webgpt.domain
 
-import com.intellij.testFramework.fixtures.BasePlatformTestCase
+import org.junit.Assert.assertTrue
+import org.junit.Test
 
-class DefaultPromptBuilderTest : BasePlatformTestCase() {
-    fun testBuildExplainPromptContainsCode() {
+class DefaultPromptBuilderTest {
+
+    private val builder = DefaultPromptBuilder()
+
+    @Test
+    fun explainPromptContainsCodeAndHeaders() {
         // Given
-        val builder = DefaultPromptBuilder()
-        val code = "fun test() = 1"
+        val code = "fun main() = Unit"
 
         // When
         val prompt = builder.buildPrompt(PromptType.EXPLAIN, code)
 
         // Then
-        assertTrue(prompt.contains(code))
         assertTrue(prompt.contains("# Explain this code in detail."))
+        assertTrue(prompt.contains("```"))
+        assertTrue(prompt.contains(code))
     }
 
-    fun testBuildFixPromptContainsCode() {
+    @Test
+    fun fixPromptContainsCodeAndInstructions() {
         // Given
-        val builder = DefaultPromptBuilder()
-        val code = "fun test() = 2"
+        val code = "val x = 1"
 
         // When
         val prompt = builder.buildPrompt(PromptType.FIX, code)
 
         // Then
-        assertTrue(prompt.contains(code))
         assertTrue(prompt.contains("# Fix and optimize this code, and suggest architecture improvements."))
+        assertTrue(prompt.contains("```"))
+        assertTrue(prompt.contains(code))
     }
 }

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "dev.bulean"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -28,7 +28,7 @@ intellijPlatform {
     buildSearchableOptions = false
     pluginConfiguration {
         ideaVersion { sinceBuild = "241" }
-        changeNotes = "Initial version"
+        changeNotes = "Release version."
     }
     pluginVerification { ides { recommended() } }
 }

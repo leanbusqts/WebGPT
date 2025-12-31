@@ -12,6 +12,7 @@ Desktop.ini
 # IDEs & Editor Configs
 ##############################
 .idea/
+.intellijPlatform/
 *.iml
 *.ipr
 *.iws
